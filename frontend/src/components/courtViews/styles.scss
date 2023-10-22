@@ -1,0 +1,22 @@
+.court_views__wrapper {
+    padding: 25px 0;
+    flex: 1;
+    border-left: 1px solid rgba(22,22,22,.05);
+    background: rgba(22, 22, 22, .25);
+}
+
+
+.court_views__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.court_views__title {
+    padding: 0 15px;
+    color: rgb(22, 22, 22, .75);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}

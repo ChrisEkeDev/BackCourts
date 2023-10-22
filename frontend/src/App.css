@@ -16,4 +16,61 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 10%;
+  overflow-x: hidden;
+}
+
+.app__section {
+  display: flex;
+  border-bottom: 1px solid rgba(22, 22, 22, .05);
+}
+
+.full_height {
+  height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+}
+
+
+h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 600;
+}
+
+p {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 300;
+  color: rgba(22, 22, 22,.75)
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(22,22,22,.05);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 64, 3);
+  transition: all .2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(206, 73, 29);
 }

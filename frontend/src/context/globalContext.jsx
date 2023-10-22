@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { createData } from "../mockData";
+import { createData, createDays } from "../mockData";
 import Loader from "../components/loader/loader";
 import { addDays, getDay, subDays } from "date-fns";
 
@@ -9,6 +9,7 @@ export const useGlobalContext = () => useContext(GlobalContext)
 
 export function GlobalProvider({children}) {
     const [day, setDay] = useState(new Date())
+    const [days, setDays] = useState(createDays())
     const [data, setData] = useState(undefined);
 
 
@@ -36,7 +37,7 @@ export function GlobalProvider({children}) {
     }, [])
 
     return (
-        <GlobalContext.Provider value={{data, day, handleDay}}>
+        <GlobalContext.Provider value={{data, day, handleDay, days}}>
             {data ? children : <Loader/>}
         </GlobalContext.Provider>
     )

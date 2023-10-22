@@ -1,0 +1,68 @@
+.court_info__wrapper {
+    padding: 50px 0 0 0;
+
+
+}
+
+.court_info__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(22, 22, 22, .05);
+}
+
+.court_info__title {
+    padding: 0 15px;
+    color: rgb(22, 22, 22);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.court_info__action {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    span {
+        font-size: 13px;
+        transition: all .2s;
+        position: relative;
+        color: rgba(255, 64, 3,1);
+        opacity: 0;
+        right: 5%;
+    }
+    &:hover {
+        span {
+            opacity: 1;
+            right: 0%;
+        }
+    }
+
+}
+
+.court_info__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: rgba(22, 22, 22,.25);
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 20px;
+    &:hover {
+        color: rgba(255, 64, 3,1);
+    }
+}
+
+.ratings__wrapper {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 5px 0;
+    gap: 5px;
+}
+
+.ratings__star {
+    font-size: 20px;
+}

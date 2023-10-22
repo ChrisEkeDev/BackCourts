@@ -1,0 +1,41 @@
+.carousel__wrapper {
+  width: 100%;
+}
+
+.carousel__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
+.carousel__item {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.carousel__arrow {
+    height: 40px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    position: absolute;
+}
+
+.right_arrow {
+    right: -20px;
+}
+
+.left_arrow {
+    left: -20px;
+}

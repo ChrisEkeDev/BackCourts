@@ -1,7 +1,8 @@
 
 
 .player_activity__wrapper {
-    padding: 50px 0;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(22,22,22,.05);
 }
 
 .player_activity__header {
@@ -17,25 +18,13 @@
     flex-direction: column;
     gap: 5px;
     justify-content: center;
-
-    h2 {
-        font-size: 18px;
-        margin: 0;
-        font-weight: 600;
-    }
-
-    h3 {
-        font-size: 12px;
-        margin: 0;
-        font-weight: 300;
-        color: rgba(22, 22, 22,.75)
-    }
 }
 
 .player_activity__day_select {
     display: flex;
     align-items: center;
-    gap: 10px;
+    width: 200px;
+    position: relative;
 
     span {
         color: rgba(22, 22, 22, 1);
@@ -46,21 +35,50 @@
     }
 }
 
+.player_activity__day_select__overlay {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+    z-index: 5;
+}
+
 .player_activity__button {
-    height: 40px;
-    aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
     background: transparent;
-    color: rgba(22, 22, 22,.75);
+    border: none;
+    color: rgba(22, 22, 22,.25);
     cursor: pointer;
     transition: all .2s;
+    position: absolute;
+    z-index: 10;
+    font-size: 20px;
 
     &:hover {
-        color: rgba(22, 22, 22,1)
+        color: rgba(22, 22, 22,1);
+
     }
+
+}
+
+.right_button {
+    right: 10px;
+}
+
+.left_button {
+    left: 10px;
+}
+
+.day__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
 
 }
 
@@ -93,12 +111,12 @@
     &:hover {
         .player_activity__line {
             height: 30%;
-            background-color: rgba(22, 22, 22, 1);
-            box-shadow: 0 0 30px 15px rgba(22, 22, 22,.05);
+            background-color: rgba(255, 64, 3, 1);
+            box-shadow: 0 0 30px 15px rgba(255, 64, 3,.05);
         }
 
         .player_activity__time {
-            color: rgba(22, 22, 22, 1);
+            color: rgba(255, 64, 3, 1);
         }
 
         .player_activity__count {
@@ -131,7 +149,7 @@
     top: 5%;
     left: 75%;
     opacity: 0;
-    color: rgba(22, 22, 22, 1);
+    color: rgba(255, 64, 3, 1);
     transition: all .2s ease-in;
     font-weight: 600;
 }
@@ -168,6 +186,7 @@
     border-radius: 10px;
     background-blend-mode: darken;
     z-index: 1;
-    background: radial-gradient(ellipse at center,rgba(255, 72, 0, 0.075) 10%, rgba(255, 72, 0, .050) 80%, rgba(255, 72, 0, 0) 90%);
+    transition: all .3s;
+    background: radial-gradient(ellipse at center,rgba(206, 73, 29, 0.075) 10%, rgba(206, 73, 29, .050) 80%, rgba(206, 73, 29, 0) 90%);
     filter: blur(5px);
 }

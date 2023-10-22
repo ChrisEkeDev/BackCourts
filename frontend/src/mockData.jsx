@@ -8,6 +8,20 @@ export function createTimeLine(day) {
   return timeline;
 }
 
+export function createDays() {
+  let currentDay = startOfWeek(new Date())
+  const days = []
+  for (let i = 0; i < 7; i++) {
+    const day = {
+      id: i,
+      value: addDays(currentDay, i),
+      label: format(addDays(currentDay, i), "ccc")
+    }
+    days.push(day)
+  }
+  return days
+}
+
 export function createData(date) {
     console.log("creating Data")
     const data = [];
